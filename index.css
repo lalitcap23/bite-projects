@@ -1,0 +1,42 @@
+.card {
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 10px; /* Changed to a reasonable value for rounding */
+  box-shadow: 5px 5px 5px hsl(0, 0%, 0%, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: left;
+  max-width: 300px; /* Corrected syntax and set to a reasonable size */
+  display: inline-block;
+}
+
+.card .card-image {
+  max-width: 60%;
+  height: auto;
+  border-radius: 10%;
+  margin-bottom: 10px;
+}
+
+.card .card-title {
+  font-family: Arial, sans-serif; /* Corrected 'font-family' syntax */
+  margin: 0; /* Fixed 'margin' syntax */
+  color: black;
+}
+.card .text-sheet{
+  font-family: Arial, Helvetica, sans-serif;
+  color: hsl(0, 0%, 40%)
+}
+.button{
+  background-color: hsl(0, 0%, 40%);
+  color:burlywood;
+  padding :10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+
+}
+.student{
+  font-style: Arial ,sans-serif;
+ font-size: 1em;
+ padding:1px;
+ border :1px solid hsl(0, 0%, 40%)
+}
