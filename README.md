@@ -1,3 +1,3 @@
 
-# bite-projects
+# bits-projects -
 
