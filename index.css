@@ -40,3 +40,21 @@
  padding:1px;
  border :1px solid hsl(0, 0%, 40%)
 }
+.welcome {
+  font-size: 2.em; /* Use hyphen (-) instead of space */
+  background-color: hsl(120, 88%, 38%); /* Percentages in HSL */
+  color: white; /* Replace with a valid color value */
+  padding:1 px;
+  border-radius: 1px;
+  margin: 1;
+}
+.nowel{
+  font-size: 2.em; /* Use hyphen (-) instead of space */
+  background-color: hsl(12, 91%, 47%); /* Percentages in HSL */
+  color: red; /* Replace with a valid color value */
+  padding:1 px;
+  border-radius: 1px;
+  margin: 1;
+}
+
+}
