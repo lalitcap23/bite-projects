@@ -3,8 +3,8 @@ import List from "./list.jsx"
 import Student from "./student.jsx"
 import Footer from "./Footer.jsx";
 import Card from "./Card.jsx";
-import Button from "./Button.jsx"; 
 import UserGreeting from "./userGreeting.jsx";
+import Button1 from "./button1.jsx";
 
 function App() {
   return (
@@ -15,8 +15,8 @@ function App() {
       <Student/>
       <Card />
       <Footer />
-      <Button />  
       <List />
+      <Button1/>
 
     </>
   );
