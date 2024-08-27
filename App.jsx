@@ -5,6 +5,7 @@ import Footer from "./Footer.jsx";
 import Card from "./Card.jsx";
 import UserGreeting from "./userGreeting.jsx";
 import Button1 from "./button1.jsx";
+import Pp from "./pp.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Footer />
       <List />
       <Button1/>
+      <pp/>
 
     </>
   );
