@@ -11,6 +11,7 @@ function List() {
             <b>{fruit.cal}</b>
         </li>
     ));
+    fruits.sort((a ,b)=> a.cal -b.cal);
 
     return (
         <ol>
