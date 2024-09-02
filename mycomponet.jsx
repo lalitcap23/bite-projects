@@ -1,16 +1,29 @@
-import  React ,{userstate} from 'react';
-function Mycomponent(){
-    let [ name , setName]=    userstate();
-    const updatename =() =>{
-       setname("jack");
+import React, { useState } from 'react';
 
+function MyComponent() {
+    let [name, setName] = useState("Guest");
+    const [age, setAge] = useState(0);
+
+    const updateName = () => {
+        setName("Jack");
     }
-    return(
-        <div>
-            <p> Name : {name}</p>
-            <button onClick={ updatename}> set name </button>
-        </div>
-    );
 
+    const updateAge = () => {
+        setAge( age+1);
+    }
+
+    return (
+        <>
+            <div>
+                <p>Name: {name}</p>
+                <button onClick={updateName}>Set Name</button>
+            </div>
+            <div>
+                <p>Age: {age}</p>
+                <button onClick={updateAge}>Set Age</button>
+            </div>
+        </>
+    );
 }
-default export Mycomponent;
+
+export default MyComponent;
