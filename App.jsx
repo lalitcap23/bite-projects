@@ -8,6 +8,7 @@ import Button1 from "./button1.jsx";
 import Pp from "./pp.jsx";
 import Mycomponent from "./mycomponet.jsx"
 import Counter from "./counter.jsx";
+import Component from "./component.jsx";
 
 function App() {
   return (
@@ -18,11 +19,12 @@ function App() {
       <Student/>
       <Card />
       <Footer />
+      <Component/>
             <List />
       <Button1/>
       <Mycomponent/>
       <Counter/>
-      <pp/>
+          <pp/>
 
     </>
   );
