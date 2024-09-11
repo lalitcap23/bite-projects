@@ -10,6 +10,7 @@ import Mycomponent from "./mycomponet.jsx"
 import Counter from "./counter.jsx";
 import Component from "./component.jsx";
 import Cc from "./cc.jsx";
+import Todo from "./todo.jsx";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Mycomponent/>
       <Counter/>
       <Cc/>
+      <Todo/>
           <pp/>
 
     </>
