@@ -1,69 +1,82 @@
-import react  ,{useState} from 'react'
-function todo(){
-    const [task ,settask] = useState(["eat " ,"bathe" ,"sleep"]);
-    const [newtask, setnewtask]= useState("");
+import React, { useState } from 'react';
 
-    function handleInputstate(event){
-        setnewtask(event.target.value)
+function TodoList() {
+  const [tasks, setTasks] = useState(["eat", "bathe", "sleep"]);
+  const [newTask, setNewTask] = useState("");
 
+  function handleInputChange(event) {
+    setNewTask(event.target.value);
+  }
+
+  function addTask() {
+    if (newTask.trim() !== "") {
+      setTasks(t => [...t, newTask]);
+      setNewTask("");
     }
+  }
 
-    function addtask(){
+  function deleteTask(index) {
+    setTasks(tasks.filter((_, i) => i !== index));
+  }
 
+  function moveUp(index) {
+    if (index > 0) {
+      const updatedTasks = [...tasks];
+      [updatedTasks[index], updatedTasks[index - 1]] = [updatedTasks[index - 1], updatedTasks[index]];
+      setTasks(updatedTasks);
     }
+  }
 
-    function deletetask(index){
-
+  function moveDown(index) {
+    if (index < tasks.length - 1) {
+      const updatedTasks = [...tasks];
+      [updatedTasks[index], updatedTasks[index + 1]] = [updatedTasks[index + 1], updatedTasks[index]];
+      setTasks(updatedTasks);
     }
+  }
 
-    function moveup(index){
-
-    }
-
-    function movedown(index){
-
-    }
-
-
-return(
-    <>
-    <div className='todo'>
-        <h2>todo</h2>
-   <input
-   type='text'
-   placeholder="enter something"
-   value={newtask}
-   onChange={handleInputstate}/> 
-    <botton 
-    className="Add-button"
-    onclick={addtask } 
-    >
-        add
-
-    </botton> 
-        </div>
-        <io>
-            {task.map ((task,index)=>
-            <li key={index}>
-             <span className='text'>task</span>
-             <button className='delete-button'
-             onChange={ ()  =>deletetask(index)}>
-
-             </button>
-
-             <button className='moveup'
-             onChange={ ()  =>moveup(index)}>
-
-             </button>
-             <button className='movedown'
-             onChange={ ()  =>movedown(index)}>
-
-             </button>
-            </li>)}
-        </io>
-    
-    
-    </>
-)
+  return (
+    <div className="todo">
+      <h2>Todo List</h2>
+      <input
+        type="text"
+        placeholder="Enter a task"
+        value={newTask}
+        onChange={handleInputChange}
+      />
+      <button
+        className="add-button"
+        onClick={addTask}
+      >
+        Add
+      </button>
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>
+            <span className="text">{task}</span>
+            <button 
+              className="delete-button"
+              onClick={() => deleteTask(index)}
+            >
+              Delete
+            </button>
+            <button 
+              className="move-up"
+              onClick={() => moveUp(index)}
+            >
+              Move Up
+            </button>
+            <button 
+              className="move-down"
+              onClick={() => moveDown(index)}
+            >
+              Move Down
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
- export  default Todolist;
+
+export default TodoList;
