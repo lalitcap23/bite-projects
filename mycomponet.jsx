@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect } from 'react';
 
 function MyComponent() {
     let [name, setName] = useState("Guest");
     const [age, setAge] = useState(0);
+
+    useEffect(()=> {
+        console.log("counter mounted");
+    },[]);
 
     const updateName = () => {
         setName("Jack");
