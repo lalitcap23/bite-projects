@@ -1,20 +1,16 @@
-import React, { useState ,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function MyComponent() {
-    let [name, setName] = useState("Guest");
+    const [name, setName] = useState("Guest");
     const [age, setAge] = useState(0);
 
-    useEffect(()=> {
-        console.log("counter mounted");
-    },[]);
+    useEffect(() => {
+        console.log("Component mounted");
+    }, []);
 
-    const updateName = () => {
-        setName("Jack");
-    }
+    const updateName = () => setName("Jack");
 
-    const updateAge = () => {
-        setAge( age+1);
-    }
+    const updateAge = () => setAge(prevAge => prevAge + 1);
 
     return (
         <>
